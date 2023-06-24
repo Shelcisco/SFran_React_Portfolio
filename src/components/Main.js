@@ -112,7 +112,7 @@ const renderPage = ()=>{
             <div className="text-center">
                 <h1>Resume</h1>
                 <div className= "res-container text-center justify-center">  
-                <p><a href="/SFran_React_Portfolio/Resume2023.pdf" download> Download</a>Resume</p> 
+                <p><a href="https://drive.google.com/file/d/1sXwWvnVi-Di_GWlUg60j1fWnRr9_a3Po/view?usp=drive_link" download> Download</a>Resume</p> 
                 
                 <div className="flex-row justify-center">          
       <div id="text">
