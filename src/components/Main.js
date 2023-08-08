@@ -1,4 +1,7 @@
 import React, { useState } from "react"; 
+import emailjs from 'emailjs-com';
+
+
 
 
 export default function Main({page}){
@@ -84,7 +87,7 @@ const renderPage = ()=>{
                 </div>
                 </div>
                 <div className= "card-container flex-col">
-                <img src="/SFran_React_Portfolio/weather.png" height="150" alt="" id = "cardImage"></img>
+                <img src="/SFran_React_Portfolio/notetaker.png" height="150" alt="" id = "cardImage"></img>
                 <h3 id="text"> Note Taker Express </h3>
                 <p id="text">Bootcamp Challenge: Note Taker using express.js</p>
                 <div className="flex-row text-center">
@@ -145,49 +148,129 @@ const renderPage = ()=>{
         )
 
         case("contact"):
-        return (
-            <form className="justify-center">
-                <h1>Contact</h1>
-                <input className="form-input"
-                type="email" 
-                placeholder = "Email"
-                value = {
-                    email
+        
+
+            // Validation functions and submit handler
+            const validateEmail = () => {
+                setEmailError(!validEmail.test(email));
+            };
+        
+            const validateName = () => {
+                setNameError(name.trim() === "");
+            };
+        
+            const validateMessage = () => {
+                setMessageError(message.trim() === "");
+            };
+        
+            const handleSubmit = (event) => {
+                event.preventDefault();
+        
+                validateEmail();
+                validateName();
+                validateMessage();
+        
+                if (emailError || nameError || messageError) {
+                    return;
                 }
-                onChange={(event)=>setEmail(event.target.value)}
-                onBlur={validateEmail}
-                >
-                </input>
-                {emailError && <h5 className="error">Please enter valid email</h5>}
-                <br></br>
-                <input className="form-input"
-                type="text" 
-                placeholder = "Name"
-                value = {
-                    name
-                }
-                onChange={(event)=>setName(event.target.value)}
-                onBlur={validateName}
-                >
-                </input>
-                {nameError && <h5 className="error" >Please enter name</h5>}
-                <br></br>
-                <input className="form-input"
-                type="text" 
-                placeholder = "Message"
-                value = {
-                    message
-                }
-                onChange={(event)=>setMessage(event.target.value)}
-                onBlur={validateMessage}
-                >
-                </input>
-                {messageError && <h5 className="error" >Please enter message</h5>}
-                <br></br>
-                <button className="btn">Submit</button>
-                <br></br>
-            </form>
-        )
+        
+                const templateParams = {
+                    email: email,
+                    name: name,
+                    message: message,
+                };
+        
+                emailjs
+                    .send('service_ai8g391', 'template_bnru5cc', templateParams, 'IWz1OiJF9cOM3KUuc')
+                    .then((response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Email sent successfully');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        alert('Failed to send email. See console for more details.');
+                    });
+            };
+        
+            // JSX for the contact form
+            return (
+                <form className="justify-center" onSubmit={handleSubmit}>
+                    <h1>Contact</h1>
+                    <input className="form-input"
+                           type="email"
+                           placeholder="Email"
+                           value={email}
+                           onChange={(event) => setEmail(event.target.value)}
+                           onBlur={validateEmail}>
+                    </input>
+                    {emailError && <h5 className="error">Please enter a valid email</h5>}
+                    <br></br>
+                    <input className="form-input"
+                           type="text"
+                           placeholder="Name"
+                           value={name}
+                           onChange={(event) => setName(event.target.value)}
+                           onBlur={validateName}>
+                    </input>
+                    {nameError && <h5 className="error">Please enter name</h5>}
+                    <br></br>
+                    <input className="form-input"
+                           type="text"
+                           placeholder="Message"
+                           value={message}
+                           onChange={(event) => setMessage(event.target.value)}
+                           onBlur={validateMessage}>
+                    </input>
+                    {messageError && <h5 className="error">Please enter a message</h5>}
+                    <br></br>
+                    <button type="submit" className="btn">Submit</button>
+                    <br></br>
+                </form>
+            );
+        
+
+
+            // <form className="justify-center">
+            //     <h1>Contact</h1>
+            //     <input className="form-input"
+            //     type="email" 
+            //     placeholder = "Email"
+            //     value = {
+            //         email
+            //     }
+            //     onChange={(event)=>setEmail(event.target.value)}
+            //     onBlur={validateEmail}
+            //     >
+            //     </input>
+            //     {emailError && <h5 className="error">Please enter valid email</h5>}
+            //     <br></br>
+            //     <input className="form-input"
+            //     type="text" 
+            //     placeholder = "Name"
+            //     value = {
+            //         name
+            //     }
+            //     onChange={(event)=>setName(event.target.value)}
+            //     onBlur={validateName}
+            //     >
+            //     </input>
+            //     {nameError && <h5 className="error" >Please enter name</h5>}
+            //     <br></br>
+            //     <input className="form-input"
+            //     type="text" 
+            //     placeholder = "Message"
+            //     value = {
+            //         message
+            //     }
+            //     onChange={(event)=>setMessage(event.target.value)}
+            //     onBlur={validateMessage}
+            //     >
+            //     </input>
+            //     {messageError && <h5 className="error" >Please enter message</h5>}
+            //     <br></br>
+            //     <button className="btn">Submit</button>
+            //     <br></br>
+            // </form>
+        
     }
 }
 
