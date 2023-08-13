@@ -35,7 +35,7 @@ const renderPage = ()=>{
         return (
             <div>
                 <h1>About Me</h1>
-                <p> <img src="/SFran_React_Portfolio/Mee.jpg" height="100" alt="" id = "me"></img> Hi there, my name is Shelby. After working in financials for years I wanted to try something more creative than crunching numbers, I took a big step and signed up for the UW's coding bootcamp.</p> 
+                <p> <img src="/SFran_React_Portfolio/Mee.jpg" height="100" alt="" id = "me"></img> Hi there, my name is Shelby. After working in the financial industry for years I wanted to try something more creative than crunching numbers, I took a big step and signed up for the UW's coding bootcamp.</p> 
  <p>While there's nothing wrong with crunching, I've found I prefer coding! I'm consistently working to improve my skills, please see my portfolio to look at what I've built so far. Thank you!</p>
             </div>
         )
@@ -87,7 +87,7 @@ const renderPage = ()=>{
                 </div>
                 </div>
                 <div className= "card-container flex-col">
-                <img src="/SFran_React_Portfolio/notetaker.png" height="150" alt="" id = "cardImage"></img>
+                <img src="/SFran_React_Portfolio/notetaker2.png" height="150" alt="" id = "cardImage"></img>
                 <h3 id="text"> Note Taker Express </h3>
                 <p id="text">Bootcamp Challenge: Note Taker using express.js</p>
                 <div className="flex-row text-center">
@@ -115,7 +115,7 @@ const renderPage = ()=>{
             <div className="text-center">
                 <h1>Resume</h1>
                 <div className= "res-container text-center justify-center">  
-                <p><a href="https://drive.google.com/file/d/1sXwWvnVi-Di_GWlUg60j1fWnRr9_a3Po/view?usp=drive_link" download> Download</a>Resume</p> 
+                <p><a href="/SFran_React_Portfolio/2023.ShelbyFranciscoResume.docx" download> Download</a>Resume</p> 
                 
                 <div className="flex-row justify-center">          
       <div id="text">
@@ -229,47 +229,7 @@ const renderPage = ()=>{
         
 
 
-            // <form className="justify-center">
-            //     <h1>Contact</h1>
-            //     <input className="form-input"
-            //     type="email" 
-            //     placeholder = "Email"
-            //     value = {
-            //         email
-            //     }
-            //     onChange={(event)=>setEmail(event.target.value)}
-            //     onBlur={validateEmail}
-            //     >
-            //     </input>
-            //     {emailError && <h5 className="error">Please enter valid email</h5>}
-            //     <br></br>
-            //     <input className="form-input"
-            //     type="text" 
-            //     placeholder = "Name"
-            //     value = {
-            //         name
-            //     }
-            //     onChange={(event)=>setName(event.target.value)}
-            //     onBlur={validateName}
-            //     >
-            //     </input>
-            //     {nameError && <h5 className="error" >Please enter name</h5>}
-            //     <br></br>
-            //     <input className="form-input"
-            //     type="text" 
-            //     placeholder = "Message"
-            //     value = {
-            //         message
-            //     }
-            //     onChange={(event)=>setMessage(event.target.value)}
-            //     onBlur={validateMessage}
-            //     >
-            //     </input>
-            //     {messageError && <h5 className="error" >Please enter message</h5>}
-            //     <br></br>
-            //     <button className="btn">Submit</button>
-            //     <br></br>
-            // </form>
+    
         
     }
 }
