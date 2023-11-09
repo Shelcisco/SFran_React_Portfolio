@@ -55,8 +55,52 @@ export default function Main({ page }) {
                 return (
                     // Portfolio page JSX with project cards
                     <div className="text-center">
-                        <h1>Portfolio</h1>
+<h1>Portfolio</h1>
+<div className="flex-row justify-center">
+                            <div className="card-container flex-col">
+                                <img src="/SFran_React_Portfolio/planner.png" height="150" alt="" id="cardImage"></img>
+                                <h3 id="text"> Workplace Planner </h3>
+                                <p id="text">Bootcamp Challenge: Scheduler, HTML/CSS powered by jQuery</p>
+                                <div className="flex-row text-center">
+                                    <br></br>
+                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Workplace-Planner" > Github Repo</a></button>
+                                    <button className="card-btn"><a href="https://shelcisco.github.io/Workplace-Planner/" > Live Site</a></button>
+                                </div>
+                            </div>
+                            <div className="card-container flex-col">
+                                <img src="/SFran_React_Portfolio/hozho.png" height="150" alt="" id="cardImage"></img>
+                                <h3 id="text"> Hozho Weaving Network </h3>
+                                <p id="text">Collabarative project using MERN and GraphQL</p>
+                                <div className="flex-row text-center">
+                                    <br></br>
+                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Hozho-Weaving-Network" > Github Repo</a></button>
+                                    <button className="card-btn"><a href="https://hozho-weaving-network.herokuapp.com/" > Live Site</a></button>
+                                </div>
+                            </div>
+                        
+                            <div className="card-container flex-col">
+                                <img src="/SFran_React_Portfolio/codequiz.png" height="150" alt="" id="cardImage"></img>
+                                <h3 id="text"> Coding Quiz </h3>
+                                <p id="text">Bootcamp Challenge: Timed Quiz, HTML/CSS powered by JS</p>
+                                <div className="flex-row text-center">
+                                    <br></br>
+                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Coding-Quiz" > Github Repo</a></button>
+                                    <button className="card-btn"><a href="https://shelcisco.github.io/Coding-Quiz/" > Live Site</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div className="flex-row justify-center">
+                        <div className="card-container flex-col">
+                                <img src="/SFran_React_Portfolio/notetaker2.png" height="150" alt="" id="cardImage"></img>
+                                <h3 id="text"> Note Taker Express </h3>
+                                <p id="text">Bootcamp Challenge: Note Taker using express.js</p>
+                                <div className="flex-row text-center">
+                                    <br></br>
+                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Note-Taker-Express" > Github Repo</a></button>
+                                    <button className="card-btn"><a href="https://shelcisco-note-taker-express.herokuapp.com/" > Live Site</a></button>
+                                </div>
+                            </div>
                             <div className="card-container flex-col">
                                 <img src="/SFran_React_Portfolio/cosmic.png" height="150" alt="" id="cardImage"></img>
                                 <h3 id="text"> Cosmic Climate </h3>
@@ -77,49 +121,10 @@ export default function Main({ page }) {
                                     <button className="card-btn"><a href="https://sleep--sync.herokuapp.com/" > Live Site</a></button>
                                 </div>
                             </div>
-                            <div className="card-container flex-col">
-                                <img src="/SFran_React_Portfolio/hozho.png" height="150" alt="" id="cardImage"></img>
-                                <h3 id="text"> Hozho Weaving Network </h3>
-                                <p id="text">Collabarative project using MERN and GraphQL</p>
-                                <div className="flex-row text-center">
-                                    <br></br>
-                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Hozho-Weaving-Network" > Github Repo</a></button>
-                                    <button className="card-btn"><a href="https://hozho-weaving-network.herokuapp.com/" > Live Site</a></button>
-                                </div>
-                            </div>
+                            
+                           
                         </div>
-                        <div className="flex-row justify-center">
-                            <div className="card-container flex-col">
-                                <img src="/SFran_React_Portfolio/planner.png" height="150" alt="" id="cardImage"></img>
-                                <h3 id="text"> Workplace Planner </h3>
-                                <p id="text">Bootcamp Challenge: Scheduler, HTML/CSS powered by jQuery</p>
-                                <div className="flex-row text-center">
-                                    <br></br>
-                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Workplace-Planner" > Github Repo</a></button>
-                                    <button className="card-btn"><a href="https://shelcisco.github.io/Workplace-Planner/" > Live Site</a></button>
-                                </div>
-                            </div>
-                            <div className="card-container flex-col">
-                                <img src="/SFran_React_Portfolio/notetaker2.png" height="150" alt="" id="cardImage"></img>
-                                <h3 id="text"> Note Taker Express </h3>
-                                <p id="text">Bootcamp Challenge: Note Taker using express.js</p>
-                                <div className="flex-row text-center">
-                                    <br></br>
-                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Note-Taker-Express" > Github Repo</a></button>
-                                    <button className="card-btn"><a href="https://shelcisco-note-taker-express.herokuapp.com/" > Live Site</a></button>
-                                </div>
-                            </div>
-                            <div className="card-container flex-col">
-                                <img src="/SFran_React_Portfolio/codequiz.png" height="150" alt="" id="cardImage"></img>
-                                <h3 id="text"> Coding Quiz </h3>
-                                <p id="text">Bootcamp Challenge: Timed Quiz, HTML/CSS powered by JS</p>
-                                <div className="flex-row text-center">
-                                    <br></br>
-                                    <button className="card-btn"><a href="https://github.com/Shelcisco/Coding-Quiz" > Github Repo</a></button>
-                                    <button className="card-btn"><a href="https://shelcisco.github.io/Coding-Quiz/" > Live Site</a></button>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 )
 
