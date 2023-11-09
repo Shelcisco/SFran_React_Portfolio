@@ -1,3 +1,4 @@
+/* Color Pallette for entire application */
 
 :root{
   --g1:#F6FFF8;
@@ -5,24 +6,24 @@
   --g3:#cce3de;
   --g4:#A4C3B2;
   --g5:#344640;
-
-
 }
 
+/* Basic instruction (Margin/Font/Background) for entire application */
+
 body {
-  margin: 0;
   font-family: Segoe Script;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-color: var(--g3);
+  flex-wrap: wrap;
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  text-align: center;
+  color: var(--g5);
 }
-
-
-/* Style for Main Page */
 
 * {
   margin: 5px;
@@ -30,23 +31,7 @@ code {
 }
 
 
-html {
-  height: 100%;
-  background-color: var(--g3);
-  flex-wrap: wrap;
-}
-
 /* Style for header */
-
-/* To make images round/add border */
-
-#me {
-  border-radius: 50%;
-  border: 5px solid #ffffff;
-}
-
-
-/* Styling for Navbar */
 
 .header {
   display: flex;
@@ -56,10 +41,19 @@ html {
   color: var(--g1);
   font-family: Segoe Script;
   src: local("Segoe Script");
-
-
-
 }
+
+/* Style for footer */
+
+.footer {
+  text-align: center;
+  position:relative;
+  left:0;
+  bottom:0;
+  width: 100%;
+}
+
+/* Styling for Navbar */
 
 .nav {
   display: flex;
@@ -72,21 +66,22 @@ html {
   color: var(--g1);
 }
 
-.header {
-  font-family: Segoe Script;
-}
 
+/* Style for "About Me" section/image */
+
+#me {
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+}
 
 .about {
   color: var(--g1);
   flex-wrap: wrap;
   justify-content: space-between;
-
-
-
 }
 
-/* Styling for Work Section/project cards */
+
+/* Style for Portfolio Section/project cards */
 
 main {
   display: flex;
@@ -95,34 +90,8 @@ color:var(--g1);
 font-family: Segoe Script;
 }
 
-  .footer {
-    text-align: center;
-    position:relative;
-    left:0;
-    bottom:0;
-    width: 100%;
-  }
 
-  h1{
-    text-align: center;
-    color: var(--g5);
-  }
-
-  /* Styling for contact */
-  .contact {
-      color: var(--g1);
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-family: Segoe Script;
-
-  }
-
-
-
- 
-
-  .card-container {
-  /* height: 50px; */
+ .card-container {
   width: 20rem;
   border-radius: 1rem;
   box-shadow: 0px 10px 8px #999;
@@ -167,32 +136,23 @@ font-family: Segoe Script;
  display:inline-block;
 }
 
+
+/* Style for resume section */
+
 .res-container{
   justify-content: center;
-  /* display: flex; */
   flex-direction: column
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
+
+ /* Style for contact form/section */
+
+ .contact {
+  color: var(--g1);
   flex-wrap: wrap;
-}
+  justify-content: space-between;
+  font-family: Segoe Script;
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.content-wrapper {
-  position: relative;
-  padding-bottom: 2rem;
-  min-height: 80vh;
 }
 
 form {
@@ -210,8 +170,6 @@ form .form-input,
 form .form-textarea {
   display: inline-block;
   margin-left: 0;
-  /* margin-left:auto;
-  margin-right: auto; */
 }
 
 
@@ -220,7 +178,6 @@ form .form-input {
   padding: 0.75rem;
   color: var(--g5);
   background-color: var(--g1);
-  /* margin: 0.625rem 0; */
   font-size: 1.2rem;
   border: 1px solid var(--g4);
   border-radius: 0.3rem;
@@ -243,69 +200,28 @@ form .form-input {
  display:inline-block;
 }
 
-.col-auto {
-  flex-grow: 1;
-  flex-basis: 0;
+/* To make application adjust to different screen sizes (wrap/flex/justify) */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.col-1 {
-  flex: 0 0 8.33333%;
-  max-width: 8.33333%;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.col-2 {
-  flex: 0 0 16.66667%;
-  max-width: 16.66667%;
+.justify-center {
+  justify-content: center;
 }
 
-.col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.col-4 {
-  flex: 0 0 33.33333%;
-  max-width: 33.33333%;
-}
-
-.col-5 {
-  flex: 0 0 41.66667%;
-  max-width: 41.66667%;
-}
-
-.col-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col-7 {
-  flex: 0 0 58.33333%;
-  max-width: 58.33333%;
-}
-
-.col-8 {
-  flex: 0 0 66.66667%;
-  max-width: 66.66667%;
-}
-
-.col-9 {
-  flex: 0 0 75%;
-  max-width: 75%;
-}
-
-.col-10 {
-  flex: 0 0 83.33333%;
-  max-width: 83.33333%;
-}
-
-.col-11 {
-  flex: 0 0 91.66667%;
-  max-width: 91.66667%;
-}
-
-.col-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
+.content-wrapper {
+  position: relative;
+  padding-bottom: 2rem;
+  min-height: 80vh;
 }
 
 
