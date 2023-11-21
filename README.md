@@ -5,7 +5,7 @@
 Welcome to my Portfolio! This project showcases my journey as a developer, highlighting skills I obtained through the University of Washington's coding bootcamp and self-teaching. 
 I've found a true passion for coding, expect this portfolio to update as I complete more projects and gain new skills. 
 
-If you have any questions, comments, or would like to connect, please reach out to me via [LinkedIn](https://www.linkedin.com/in/shelby-francisco-111948100/) or [Github](https://github.com/Shelcisco).
+If you have any questions, comments, or would like to connect, please reach out to me via [LinkedIn](https://www.linkedin.com/in/shelby-francisco-111948100/) 
 
 Thank so much for stopping by, I look forward to connecting with you! 
 
